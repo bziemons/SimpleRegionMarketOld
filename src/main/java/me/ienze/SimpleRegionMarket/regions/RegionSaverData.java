@@ -92,7 +92,7 @@ public class RegionSaverData {
                     //remove old block good
                     Block b = world.getBlockAt(mix + x, miy + y, miz + z);
                     if (b.getState() instanceof ContainerBlock) {
-                        ((ContainerBlock) b.getState()).getInventory().clear();
+                        ((ContainerBlock) b.getState()).breakNaturally();
                     }
                     b.setTypeIdAndData(blockId, blockData, false);
                 }

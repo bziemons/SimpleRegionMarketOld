@@ -671,7 +671,7 @@ public class CommandHandler implements CommandExecutor {
             }
         } else if (args[0].toLowerCase().equals("remmember") || args[0].toLowerCase().equals("removemember")) {
 
-            if (isConsole || SimpleRegionMarket.permManager.canPlayerCommandAddMember(player)) {
+            if (isConsole || SimpleRegionMarket.permManager.canPlayerCommandRemoveMember(player)) {
                 if (isConsole && args.length < 4) {
                     LangHandler.consoleOut("CMD.REM_MEMBER.NO_ARG", Level.INFO, null);
                     return true;
